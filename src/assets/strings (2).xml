@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Avisame</string>
+    <string name="slogan">Una aplicación social</string>
+    <string name="navigation_drawer_open">Abrir drawe</string>
+    <string name="navigation_drawer_close">Cerrar drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Encabezado</string>
+    <string name="action_settings">Configuraciones</string>
+    <string name="emergency_call">LLamada de Emergencia</string>
+    <string name="help">Ayuda</string>
+
+
+    <!-- NOTIFICATIONS -->
+    <string name="newo">Nuevo</string>
+    <string name="nearyou">cerca de tí</string>
+    <string name="in_your_region">en tu región</string>
+    <string name="none">ninguna</string>
+
+
+    <!-- Drawer strings -->
+    <string name="app_name_app">Avisame App</string>
+    <string name="company_name">Elesteam</string>
+    <string name="app_version">1.0</string>
+    <string name="map">Mapa</string>
+    <string name="share_with_friends">Compartir con amigos</string>
+    <string name="config">Configuraciones</string>
+    <string name="sendnewreport">Reportar nuevo suceso</string>
+
+
+
+
+    <!--  INFORMATION SCREEN -->
+    <string name="info">Información</string>
+    <string name="info_description">Avisame App es una aplicación móvil para reportar actos delictivos en la región, con la posibilidad de verlos en tiempo real sobre un mapa, además características como llamadas de emergencia y notificaciones instantaneas</string>
+
+
+    <!-- emergency call dialog -->
+    <string name="call">Llamar</string>
+
+
+    <!-- NO IN LOCATION -->
+    <string name="no_in_country_titlee">No estas en el país</string>
+    <string name="no_in_country">Debido a que no estas en el país, solo podrás ver los reportes en el mapa pero no podrás enviar reportes, esto con motivo de evitar reportes falsos y mejorar la calidad de la información</string>
+    <string name="turnonlocation">Encender ubicación</string>
+
+    <!-- Reporting from outside the country -->
+    <string name="reporting_from_outside_title">Importante</string>
+    <string name="reporting_from_outside_body">Antes de que tu reporte sea visible para todos debemos verificarlo, ya que estas reportandolo desde el extranjero. Gracias por su compresión</string>
+
+    <!-- REPORT DIALOG -->
+    <string name="enter_details">Ingresar detalle</string>
+    <string name="tosendnewreport">Para enviar su reporte, por favor complete todos los campos</string>
+    <string name="invalidcountry">Por favor, seleccione una ubicación dentro de su país</string>
+    <string name="cancel">Cancelar</string>
+    <string name="save">Guardar</string>
+    <string name="description">Descripción</string>
+    <string name="date">Fecha</string>
+    <string name="title">Suceso</string>
+    <string name="time">Hora</string>
+    <string name="location">Ubicación</string>
+    <string name="ok">OK</string>
+    <string name="hide">Ocultar</string>
+    <string name="moreinfo">Más información</string>
+    <string name="close">Cerrar</string>
+    <string name="exit">Salir</string>
+    <string name="cantreport">Lo sentimos, solo puedes realizar un reporte por día</string>
+    <string name="indications">Indicaciones</string>
+    <string name="wheredidhappend">¿Dónde sucedió todo?</string>
+    <string name="holdmarker">Mantener presionado el marcador y moverlo para indicar dónde sucedió todo</string>
+    <string name="sending_report">Enviando reporte (Aprobacion pendiente)</string>
+
+    <!-- NPERSON Text -->
+    <string name="number_of_people">Numero de personas</string>
+    <string name="number_of_thieves">Numero de ladrones</string>
+    <string name="number_of_affected">Numero de afectados</string>
+    <string name="number_of_abducted">Numero de secuestrados</string>
+
+    <!-- BANNED USER DIALOG -->
+    <string name="banned_account">Cuenta Cerrada</string>
+    <string name="sorrybanned">Lo sentimos, su cuenta ha sido cerrada por hacer uso indebido de la aplicación</string>
+
+
+    <!-- UPDATE APP DIALOG -->
+    <string name="updateapp_des">La aplicación no está actualizada, por favor actualizala</string>
+    <string name="updateapp">Actualizar aplicación</string>
+    <string name="update">Actualizar</string>
+
+    <!-- TURN ON LOCATION -->
+    <string name="connectapp_des">Por favor, Encender la ubicación y Recargar</string>
+    <string name="connectapp">Encender Localización</string>
+    <string name="connect">Recargar</string>
+    <string name="sorrywolp">"Lo sentimos, la aplicación necesita acceder a su ubicación"</string>
+    <string name="weneed_permissions_towork">Necesitamos acceso a ubicación para trabajar</string>
+    <string name="bad_country">No puedes enviar eventos estando fuera del país</string>
+    <string name="bad_country_title">Fuera de servicio</string>
+
+
+    <!--  REPORT TYPES -->
+    <string name="homicide">Homicidio</string>
+    <string name="rob">Robo</string>
+    <string name="busassault">Asalto en Bus</string>
+    <string name="carcrash">Accidente Vehicular</string>
+    <string name="abduction">Secuestro</string>
+    <string name="suspicius">Sospechoso</string>
+    <string name="hitbycar">Atropellado</string>
+    <string name="raped">Violación</string>
+    <string name="diedfound">Fallecido Encontrado</string>
+
+    <!-- SPLASH SCREEN -->
+    <string name="title_activity_splash_screen">BienvenidaActivity</string>
+
+    <!-- SETUP SCREEN -->
+    <string name="select_country">Selecciona tu país</string>
+    <string name="accept">Aceptar</string>
+    <string name="xcontinue">Continuar</string>
+    <string name="title_activity_settings">Ajustes</string>
+
+
+    <!-- TERMS/CONDITIONS AND PERMISSION SCREEN -->
+    <string name="grant_permissions">Dar permisos</string>
+    <string name="location_permission">Permiso de ubicación</string>
+    <string name="terms_conditions">Terminos y Condiciones</string>
+    <string name="giveus_permissions">La aplicación necesita permisos de ubicación para mostrar informes y alertas cerca de usted, la aplicación NO funcionará sin estos permisos, por favor proporcionelos</string>
+    <string name="conditions">Solo puedes reportar eventos reales, cualquier reporte falso resultará en que su cuenta sea cerrada. No nos hacemos responsables del mal uso de la aplicación o de algún tipo de problema social.</string>
+    <string name="agree">Acepto</string>
+    <string name="disagree">No acepto</string>
+    <string name="privacy_policy">Política de Privacidad</string>
+    <string name="pp_descripcion">La aplicación recolecta datos de ubicación con el fin de crear una experiencia de usuario real, ya que éste puede crear reportes de hechos delictivos y solo esta permitido que lo pueda hacer cerca del lugar de los hechos, ademas también recolecta información del dispositivo para combatir reportes falsos ya que si un usuario envía un reporte falso, este se desechara, la aplicación también solicita permisos de acceso a internet para comunicarse con los servidores y funcionar correctamente, ademas de permisos de llamadas para el funcionamiento del botón de llamada de emergencia dentro de la aplicación.</string>
+
+
+    <!-- HELP DIALOG -->
+    <string name="symbology">Simbología</string>
+    <string name="sendreport">Enviar Reporte</string>
+    <string name="isawit_feedback">También lo vi</string>
+    <string name="report_types">Tipos de reporte</string>
+    <string name="options">Opciones</string>
+    <string name="youcanonlyreport1">* Importante: Por favor contribuye reportando todo delito que conozcas</string>
+    <string name="danger_scale">Escala de peligro</string>
+
+
+    <!-- DATES -->
+    <string name="today">Hoy</string>
+    <string name="yesterday">Ayer</string>
+    <string name="daysago2">Hace 2 días</string>
+    <string name="daysago3">Hace 3 días</string>
+    <string name="daysago4">Hace 4 días</string>
+    <string name="daysago5">Hace 5 días</string>
+    <string name="daysago6">Hace 6 días</string>
+    <string name="daysago7">Hace 7 días</string>
+
+
+    <!-- INFO DIALOG -->
+    <string name="contrib">Contribuye reportando activamente</string>
+    <string name="contrib_desc">Contribuye y ayuda a denunciar cualquier acto criminal que presencie o vea en las noticias, para que todos estemos informados.</string>
+    <!-- Strings related to Settings -->
+    <string name="emergency_number">Número de emergencia</string>
+    <string name="emergency_contact">Contacto de emergencia</string>
+    <string name="with_notifications">¿Cuales notificaciones le gustaría recibir?</string>
+    <string name="all_events">Todos los nuevos eventos</string>
+    <string name="only_nearme">Solo eventos cercanos a mí</string>
+    <string name="administration_title">Administración</string>
+    <string-array name="settings_main">
+        <item name="settings_m_cont">Números de emergencia</item>
+        <item name="settings_m_country">País</item>
+    </string-array>
+
+
+    <!-- REPORT LIST ACTIVITY -->
+    <string name="reportslist">Listado de reportes</string>
+    <string name="confirmed_case">Caso confirmado</string>
+    <string name="cases">Casos:</string>
+    <string name="other">Otro</string>
+
+</resources>

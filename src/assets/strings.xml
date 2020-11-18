@@ -1,0 +1,176 @@
+<resources>
+    <string name="app_name">Avisame</string>
+    <string name="slogan">A Social App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="emergency_call">Emergency Call</string>
+    <string name="help">Help</string>
+
+
+    <!-- NOTIFICATIONS -->
+    <string name="newo">New</string>
+    <string name="nearyou">near of you</string>
+    <string name="in_your_region">in your region</string>
+    <string name="none">none</string>
+
+
+    <!-- Drawer strings -->
+    <string name="app_name_app">Avisame App</string>
+    <string name="company_name">Elesteam</string>
+    <string name="app_version">1.0</string>
+    <string name="map">Map</string>
+    <string name="share_with_friends">Share with friends</string>
+    <string name="config">Configuration</string>
+    <string name="sendnewreport">Send new event</string>
+
+
+    <!--  INFORMATION SCREEN -->
+    <string name="info">Information</string>
+    <string name="info_description">Avisame app is a mobile application to report criminal acts in the region, with the possibility of seeing them on a map in real time and features such as emergency calls and current notifications.</string>
+
+
+    <!-- emergency call dialog -->
+    <string name="call">Call</string>
+
+
+    <!-- NO IN LOCATION -->
+    <string name="no_in_country_titlee">You are not in the country</string>
+    <string name="no_in_country">Because you are not in the country, you will only be able to see the reports on the map but you will not be able to send reports, this in order to avoid false reports and improve the quality of the information</string>
+    <string name="turnonlocation">Turn on location</string>
+
+    <!-- Reporting from outside the country -->
+    <string name="reporting_from_outside_title">Important</string>
+    <string name="reporting_from_outside_body">Before your report is visible to all, we must verify it, because you are reporting it from abroad. Thanks for your comprehension</string>
+
+
+    <!-- REPORT DIALOG -->
+    <string name="enter_details">Enter details</string>
+    <string name="tosendnewreport">To send a report please fill all the fields</string>
+    <string name="invalidcountry">Please, select an location within your country</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="description">Description</string>
+    <string name="date">Date</string>
+    <string name="title">Title</string>
+    <string name="time">Time</string>
+    <string name="location">Location</string>
+    <string name="ok">OK</string>
+    <string name="hide">Hide</string>
+    <string name="moreinfo">More info</string>
+    <string name="close">Close</string>
+    <string name="exit">Exit</string>
+    <string name="cantreport">Sorry, you can only report a event daily</string>
+    <string name="indications">Indications</string>
+    <string name="wheredidhappend">Where did everything happen?</string>
+    <string name="holdmarker">Hold the marker to move it and indicate where it happened</string>
+    <string name="sending_report">Sending report (pending approval)</string>
+
+    <!-- NPERSON Text -->
+    <string name="number_of_people">Number of people</string>
+    <string name="number_of_thieves">Number of thieves</string>
+    <string name="number_of_affected">Number of affected</string>
+    <string name="number_of_abducted">Number of abducted</string>
+
+    <!-- BANNED USER DIALOG -->
+    <string name="banned_account">Banned Account</string>
+    <string name="sorrybanned">Sorry, you account has been banned due inappropriate use of this application</string>
+
+
+    <!-- UPDATE APP DIALOG -->
+    <string name="updateapp_des">Your app is not updated, please get the latest version</string>
+    <string name="updateapp">Update app</string>
+    <string name="update">Update</string>
+
+    <!-- TURN ON LOCATION -->
+    <string name="connectapp_des">Please, Turn on the Location and Reload</string>
+    <string name="connectapp">Turn on Location</string>
+    <string name="connect">Reload</string>
+    <string name="sorrywolp">"Sorry, app can NOT start without location permissions"</string>
+    <string name="weneed_permissions_towork">We need location permission to work</string>
+    <string name="bad_country">You can not report events if you are outside the country</string>
+    <string name="bad_country_title">Outside of service</string>
+
+
+    <!--  REPORT TYPES -->
+    <string name="homicide">Homicide</string>
+    <string name="rob">Rob</string>
+    <string name="busassault">Bus assault</string>
+    <string name="carcrash">Car crash</string>
+    <string name="abduction">Abduction</string>
+    <string name="suspicius">Suspicius</string>
+    <string name="hitbycar">Hit by car</string>
+    <string name="raped">Raped</string>
+    <string name="diedfound">Died found</string>
+
+    <!-- SPLASH SCREEN -->
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+
+    <!-- SETUP SCREEN -->
+    <string name="select_country">Select your country</string>
+    <string name="accept">Accept</string>
+    <string name="xcontinue">Continue</string>
+    <string name="title_activity_settings">Settings</string>
+
+
+    <!-- TERMS/CONDITIONS AND PERMISSION SCREEN -->
+    <string name="grant_permissions">Grant permissions</string>
+    <string name="location_permission">Location Permission</string>
+    <string name="terms_conditions">Terms and Conditions</string>
+    <string name="giveus_permissions">The app needs location permissions to display reports and alerts near of you, app will NOT work without these permissions, please provide it</string>
+    <string name="conditions">You can only report real events, any fake event reported will result in a banned account. We are not responsable for bad use of this app  or some kind of social problem.</string>
+    <string name="agree">I Agree</string>
+    <string name="disagree">I Disagree</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="pp_descripcion">The application collects location data in order to create a real user experience, since it can create reports of criminal acts and is only allowed to be done near the site of the events, in addition it also collects information from the device to combat reports fake because if a user sends a false report, it will be discarded, the application also requests internet access permissions to communicate with the servers and work correctly, in addition to call permissions for the operation of the emergency call button within the application.</string>
+
+
+    <!-- HELP DIALOG -->
+    <string name="symbology">Symbology</string>
+    <string name="sendreport">Send Report</string>
+    <string name="isawit_feedback">I saw it feedback</string>
+    <string name="report_types">Report types</string>
+    <string name="options">Options</string>
+    <string name="youcanonlyreport1">* Important: Please contribute reporting all criminal acts you know</string>
+    <string name="danger_scale">Scale of danger</string>
+
+
+    <!-- INFO DIALOG -->
+    <string name="contrib">Contribute by actively reporting</string>
+    <string name="contrib_desc">Contribute and help reporting any criminal act you witness or see in the news, so we will all be informed.</string>
+
+
+    <!-- DATES -->
+    <string name="today">Today</string>
+    <string name="yesterday">Yesterday</string>
+    <string name="daysago2">2 Days ago</string>
+    <string name="daysago3">3 Days ago</string>
+    <string name="daysago4">4 Days ago</string>
+    <string name="daysago5">5 Days ago</string>
+    <string name="daysago6">6 Days ago</string>
+    <string name="daysago7">7 Days ago</string>
+
+
+    <!-- Strings related to Settings -->
+    <string name="emergency_number">Emergency number</string>
+    <string name="emergency_contact">Emergency contact</string>
+    <string name="with_notifications">Which notifications do you want receive</string>
+    <string name="all_events">All new events</string>
+    <string name="only_nearme">Only events near of me</string>
+    <string name="administration_title">Administration</string>
+    <string-array name="settings_main">
+        <item name="settings_m_cont">Emergency numbers</item>
+        <item name="settings_m_country">Country</item>
+    </string-array>
+
+
+    <!-- REPORT LIST ACTIVITY -->
+    <string name="reportslist">Reports list</string>
+    <string name="coronavirus" translatable="false">Coronavirus</string>
+    <string name="confirmed_case">Confirmed Case</string>
+    <string name="cases">Cases:</string>
+    <string name="other">Other</string>
+</resources>

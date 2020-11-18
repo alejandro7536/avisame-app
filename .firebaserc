@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "avisame-29147": {
+      "hosting": {
+        "avisameapp": [
+          "avisame-29147"
+        ]
+      }
+    }
+  }
+}

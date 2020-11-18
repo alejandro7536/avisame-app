@@ -1,0 +1,10 @@
+[
+  {"name": "Homicidio", "type": "homicide"},
+  {"name": "Robo", "type": "rob"},
+  {"name": "Accidente Vehicular", "type": "carcrash"},
+  {"name": "Asalto en Bus", "type": "busassault"},
+  {"name": "Secuestro", "type": "abduction"},
+  {"name": "Sospechoso", "type": "suspicius"},
+  {"name": "Atropellado", "type": "hitbycar"},
+  {"name": "Violación", "type": "raped"}
+]
