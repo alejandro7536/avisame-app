@@ -4,6 +4,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { Report } from '../interfaces/report.interface';
 import { map, take } from 'rxjs/operators';
 import { Point } from '../models/point.model';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
@@ -15,16 +16,21 @@ export class AvisameService {
   private now = new Date();
   private minday = new Date( new Date().setDate(this.now.getDate() - 3));
   public myPosition: Point;
-  public loading = false;
+  public loading = true;
 
   constructor(
     private af: AngularFirestore,
-    private afa: AngularFireAuth
+    private afa: AngularFireAuth,
+    private router: Router
   ) {
     this.getMyPosition();
     this.afa.signInAnonymously().then(ref => {
 
       localStorage.setItem('uid', ref.user.uid);
+
+      if (!localStorage.getItem('terms')) {
+        this.router.navigateByUrl('/terms');
+      }
       this.getReports();
       this.getNotice();
 

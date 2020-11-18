@@ -12,7 +12,7 @@
   "private": true,
   "dependencies": {
     "@agm/core": "1.1.0",
-    "@angular/animations": "~10.0.3",
+    "@angular/animations": "^10.0.14",
     "@angular/common": "~10.0.3",
     "@angular/compiler": "~10.0.3",
     "@angular/core": "~10.0.3",
@@ -24,6 +24,8 @@
     "@types/googlemaps": "3.39.12",
     "animate.css": "^4.1.1",
     "firebase": "^7.0.0 || ^8.0.0",
+    "ngx-skeleton-loader": "^2.6.0",
+    "ngx-toastr": "^13.1.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.3"

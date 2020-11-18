@@ -8,10 +8,12 @@
     </div>
     <div class="animate__animated animate__fadeIn animate__faster">
       <h1 class="text-gray-700 text-xl font-bold mt-8">Ingrese detalle</h1>
-      <p class="text-sm text-gray-500 mb-3">Para enviar su reporte, por favor complete todos los campos y seleccione un punto en el mapa.</p>
+      <p class="text-sm text-gray-500 mb-3">Para enviar su reporte, por favor complete todos los campos y seleccione un
+        punto en el mapa.</p>
     </div>
 
-    <form class="w-full" #reporteForm="ngForm" (ngSubmit)="saveReport(reporteForm)" class="animate__animated animate__fadeInLeft animate__faster">
+    <form class="w-full" #reporteForm="ngForm" (ngSubmit)="saveReport(reporteForm)"
+      class="animate__animated animate__fadeInLeft animate__faster">
       <div class="flex flex-wrap -mx-3 mb-6">
         <div class="w-full md:w-1/2 px-3 mb-3">
           <input required [(ngModel)]="report.title"
@@ -28,7 +30,7 @@
         <div class="w-full md:w-1/2 px-3 mb-3">
           <select id="type" name="type" required required [(ngModel)]="report.type"
             class="block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
-            <option *ngFor="let t of types" [value]="t.type" >{{t.name}}</option>
+            <option *ngFor="let t of types" [value]="t.type">{{t.name}}</option>
 
           </select>
         </div>
@@ -63,12 +65,18 @@
 
             <select name="minutes" [(ngModel)]="minutes"
               class=" mr-1 block w-full bg-gray-200 text-gray-700 border rounded py-3 px-1 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 text-sm">
-              <option value="0">00</option>
+              <option value="00">00</option>
+              <option value="05">05</option>
               <option value="10">10</option>
+              <option value="15">15</option>
               <option value="20">20</option>
+              <option value="25">25</option>
               <option value="30">30</option>
+              <option value="35">35</option>
               <option value="40">40</option>
+              <option value="45">45</option>
               <option value="50">50</option>
+              <option value="55">55</option>
             </select>
 
             <select name="ampm" [(ngModel)]="ampm"
@@ -80,16 +88,14 @@
 
 
         </div>
-        <!-- <div class="w-full md:w-1/2 px-3 mt-3" *ngIf="point" >
-          <p class="text-sm text-gray-400">Lat: {{point.lat}}</p>
-          <p class="text-sm text-gray-400">Lng: {{point.lng}}</p>
-        </div> -->
+
 
       </div>
 
 
+      <!-- Buttons -->
 
-      <div class="md:flex md:items-center mb-5">
+      <div class="flex md:items-center mb-5">
         <div class="w-auto">
           <button
             class="shadow bg-teal-400 hover:bg-teal-500 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
@@ -105,36 +111,28 @@
           </button>
         </div>
       </div>
+      <!-- Fin Buttons -->
 
-      <div role="alert" class="animate__animated animate__fadeInUp animate__faster" *ngIf="error" >
-        <div class="flex justify-between bg-red-500 text-white font-bold rounded-t px-4 py-2">
-          <p>Ups, algo anda mal.</p>
-          <div class="cursor-pointer" (click)="closeError()">
-            <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-              stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-
-          </div>
-        </div>
-        <div class="border border-t-0 border-red-400 rounded-b bg-red-100 px-4 py-3 text-red-700">
-          <p class="text-sm">Verifica que hayas ingreseado bien los datos, y que hayas seleccionado un punto en el mapa.</p>
-        </div>
-      </div>
 
     </form>
+
+    <div class="w-full md:w-1/2  mt-3" *ngIf="point">
+      <p class="text-sm text-gray-500">Lat: {{point.lat}}</p>
+      <p class="text-sm text-gray-500">Lng: {{point.lng}}</p>
+    </div>
 
 
   </div>
 
+  <!-- Map -->
   <div class="w-full sm:w-auto h-full">
     <agm-map (mapClick)="addPoint( $event )" class="" [latitude]="reports.myPosition.latitude"
       [longitude]="reports.myPosition.longitude" *ngIf="reports.myPosition" [zoom]="10">
       <agm-marker *ngIf="point" [latitude]="point.lat" [longitude]="point.lng">
-
       </agm-marker>
     </agm-map>
   </div>
+  <!-- Fin Map -->
+
 
 </div>

@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 // Firebase
 import { AngularFireModule } from '@angular/fire';
@@ -12,15 +15,19 @@ import { environment } from '../environments/environment';
 
 // Angula Google Mapas
 import { AgmCoreModule } from '@agm/core';
+
+// Pages
 import { HomeComponent } from './pages/home/home.component';
 import { AddreportComponent } from './pages/addreport/addreport.component';
-import { FormsModule } from '@angular/forms';
+import { TermsComponent } from './pages/terms/terms.component';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    AddreportComponent
+    AddreportComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +38,10 @@ import { FormsModule } from '@angular/forms';
     AngularFireAuthModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyBHjoimmcK1YsCkcO_dYVnoMyaUch7xggY'
-    })
+    }),
+    ToastrModule.forRoot(), // ToastrModule added
+    BrowserAnimationsModule, // required animations module
+    NgxSkeletonLoaderModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

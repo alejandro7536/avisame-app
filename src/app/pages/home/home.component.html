@@ -9,19 +9,33 @@
           <h1 class="text-3xl font-bold text-gray-700">Avisame</h1>
         </div>
 
-
+        <!-- Notice -->
         <div *ngIf="reports.notice && reports.notice.enable"
-          class="h-auto w-full border border-red-500 rounded-md mt-5 animate__animated animate__fadeInLeft animate__faster">
+          class="h-auto w-full border border-red-500 rounded-md mt-5 animate__animated animate__fadeIn animate__faster">
           <div class="mx-5 py-5">
             <h3 class="text-red-600 font-bold">{{reports.notice.type | titlecase}}</h3>
             <h5 class="text-xl font-light text-red-600">{{reports.notice.nperson | number}}</h5>
             <span class="text-red-500 text-sm">{{reports.notice.description | titlecase}}</span>
           </div>
         </div>
+        <!-- Fin notice -->
 
+        <!-- Notice loader -->
+        <div class="item animate__animated animate__fadeInLeft animate__faster" *ngIf="reports.loading">
+          <ngx-skeleton-loader animation="progress" count="1" [theme]="{
+            'border-radius': '5px',
+            height: '110px',
+            'background-color': '#e2e8f0',
+            'margin-top': '18px'
+          }"></ngx-skeleton-loader>
+        </div>
+        <!-- Fin notice loader -->
+
+        <!-- Banner reports -->
         <div class="flex justify-between flex-wrap animate__animated animate__fadeInDown animate__faster">
 
-          <div class="flex mt-5 text-gray-600" *ngIf="reports.reports.length > 0" >
+          <div class="flex mt-5 text-gray-600 animate__animated animate__fadeIn animate__faster"
+            *ngIf="reports.reports.length > 0">
             <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -30,7 +44,18 @@
             <p>Listado de reportes</p>
           </div>
 
-          <div class="flex mt-5 text-gray-600" *ngIf="reports.reports.length == 0 && !reports.loading" >
+          <div class="flex mt-5 text-gray-600 animate__animated animate__fadeIn animate__faster"
+            *ngIf="reports.reports.length == 0 && reports.loading">
+            <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+            </svg>
+            <p>Cargando reportes</p>
+          </div>
+
+          <div class="flex mt-5 text-gray-600 animate__animated animate__fadeIn animate__faster"
+            *ngIf="reports.reports.length == 0 && !reports.loading">
             <svg class="-ml-1 mr-2 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
               stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -39,15 +64,30 @@
             <p>No hay reportes</p>
           </div>
 
-          <a routerLink="/add" class="animate__animated animate__fadeInRight animate__faster mt-3 p-2 rounded-full bg-gray-300 shadow-md cursor-pointer hover:bg-gray-400"><img
+          <a routerLink="/add"
+            class="animate__animated animate__fadeInRight animate__faster mt-3 p-2 rounded-full bg-gray-300 shadow-md cursor-pointer hover:bg-gray-400"><img
               src="assets/Icons/report_icon.svg" class="h-4"></a>
         </div>
+        <!-- Fin banner reports -->
       </div>
 
-      <div class="overflow-y-auto h-auto sm:h-full mt-5 sm:mb-3">
+      <!-- Loader of reports -->
+      <div class="item animate__animated animate__fadeInLeft animate__faster" *ngIf="reports.loading">
+        <ngx-skeleton-loader animation="progress" count="1" [theme]="{
+          'border-radius': '5px',
+          height: '110px',
+          'background-color': '#e2e8f0',
+          'margin-top': '15px'
+        }"></ngx-skeleton-loader>
+      </div>
+      <!-- Fin loader of reports -->
+
+
+      <!-- Reports -->
+      <div class="overflow-y-auto scrolling-touch h-auto sm:h-full mt-5 sm:mb-3">
         <!-- Reporte -->
         <div *ngFor="let report of reports.reports"
-          class="h-auto w-full border border-gray-500 p-5 rounded-md mb-2 animate__animated animate__fadeInLeft animate__faster">
+          class="h-auto w-full border border-gray-500 p-5 rounded-md mb-2 animate__animated animate__fadeIn animate__faster">
           <div class="flex justify-between">
             <h1 class="text-gray-700 font-bold text-lg">{{report.title}}</h1>
             <img src="assets/Icons/legend_{{report.type}}.svg" class="h-6 mt-1 ml-2">
@@ -63,26 +103,34 @@
         </div>
         <!-- Fin reporte -->
       </div>
+      <!-- End Reports -->
     </div>
   </div>
 
+  <!-- Map -->
   <div
     class="w-full sm:w-auto sm:col-span-2 lg:col-span-3 h-screen animate__animated animate__fadeInRight animate__faster">
     <h1 class="text-3xl font-bold text-gray-700 sm:hidden">Mapa</h1>
-    <agm-map [latitude]="reports.myPosition.latitude" [longitude]="reports.myPosition.longitude" *ngIf="reports.myPosition" [zoom]="10">
+    <!-- Map Instance -->
+    <agm-map [latitude]="reports.myPosition.latitude" [longitude]="reports.myPosition.longitude"
+      *ngIf="reports.myPosition" [zoom]="10">
+
+      <!-- My position marker -->
       <agm-marker [latitude]="reports.myPosition.latitude" [longitude]="reports.myPosition.longitude" [iconUrl]="icon">
         <agm-info-window>
           <div class="p-3 animate__animated animate__fadeIn animate__faster">
 
-          <strong class="text-lg font-bold text-gray-700">Tu Ubicación</strong>
-          <p class="text-gray-700">Te encuentras aquí</p>
+            <strong class="text-lg font-bold text-gray-700">Tu Ubicación</strong>
+            <p class="text-gray-700">Te encuentras aquí</p>
           </div>
         </agm-info-window>
       </agm-marker>
+      <!-- My position marker -->
 
 
-      <agm-marker [latitude]="reports.notice.lat" [longitude]="reports.notice.log"
-      [iconUrl]="reports.notice.icon">
+      <!-- Notice marker -->
+      <agm-marker [latitude]="reports.notice.lat" [longitude]="reports.notice.log" [iconUrl]="reports.notice.icon"
+        *ngIf="reports.notice">
         <agm-info-window>
           <div class="p-3 animate__animated animate__fadeIn animate__faster">
             <div class="flex justify-between">
@@ -91,7 +139,8 @@
             </div>
 
             <div class="flex mt-1">
-              <span class="text-gray-600 text-sm">{{reports.notice.date == now  ? 'Hoy' : reports.notice.date}} {{reports.notice.time}}</span>
+              <span class="text-gray-600 text-sm">{{reports.notice.date == now  ? 'Hoy' : reports.notice.date}}
+                {{reports.notice.time}}</span>
               <img src="assets/Icons/nperson.svg" class="h-4 ml-3">
               <p class="text-gray-600 text-sm">{{reports.notice.nperson}}</p>
             </div>
@@ -100,10 +149,12 @@
           </div>
         </agm-info-window>
       </agm-marker>
+      <!--Fin Notice marker -->
 
 
+      <!-- Reports markers -->
       <agm-marker *ngFor="let point of reports.reports" [latitude]="point.lat" [longitude]="point.log"
-      [iconUrl]="point.icon">
+        [iconUrl]="point.icon">
         <agm-info-window>
           <div class="p-3 animate__animated animate__fadeIn animate__faster">
             <div class="flex justify-between">
@@ -122,7 +173,11 @@
         </agm-info-window>
 
       </agm-marker>
+      <!--Fin Reports markers -->
     </agm-map>
+    <!-- Fin  Map Instance -->
   </div>
+  <!-- Fin Map -->
+
 
 </div>

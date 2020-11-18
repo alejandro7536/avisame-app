@@ -3,6 +3,7 @@ import { AvisameService } from '../../services/avisame.service';
 import { Report } from '../../interfaces/report.interface';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-addreport',
@@ -15,7 +16,7 @@ export class AddreportComponent implements OnInit, OnChanges {
   types: any;
   hora: string;
   hours = '1';
-  minutes = 0;
+  minutes = '00';
   error = false;
   ampm: 'am' | 'pm' = 'am';
   report: Report = {
@@ -26,7 +27,7 @@ export class AddreportComponent implements OnInit, OnChanges {
     lat: 0,
     log: 0,
     nperson: '',
-    country: 'El Salvador',
+    country: localStorage.getItem('pais'),
     enable: true,
     time: '',
     userdi: localStorage.getItem('uid'),
@@ -35,7 +36,9 @@ export class AddreportComponent implements OnInit, OnChanges {
 
   constructor(
     public reports: AvisameService,
-    private router: Router
+    private router: Router,
+    private toastr: ToastrService
+
   ) {
     this.types = [
       { "name": "Homicidio", "type": "homicide" },
@@ -77,12 +80,19 @@ export class AddreportComponent implements OnInit, OnChanges {
       this.reports.saveReport(this.report).then(() => {
         console.log('guardado');
         this.router.navigateByUrl('home');
+        this.toastr.success(`${this.report.title} se ha guardado`, 'Guardado', {
+          closeButton: true,
+          progressBar: true,
+          positionClass: 'toast-bottom-right'
+        });
       });
-
-
-
     } else {
       console.log('invalido');
+      this.toastr.error(`Verifica que hayas ingreseado bien los datos, y que hayas seleccionado un punto en el mapa.`, 'Ups, algo anda mal', {
+        closeButton: true,
+        progressBar: true,
+        positionClass: 'toast-bottom-right'
+      });
       this.error = true;
     }
 
