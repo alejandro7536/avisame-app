@@ -1,5 +1,5 @@
+import { NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { Point } from '../../models/point.model';
 import { AvisameService } from '../../services/avisame.service';
 
 @Component({
@@ -8,6 +8,8 @@ import { AvisameService } from '../../services/avisame.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+
+  public about = false;
 
   icon = {
     url: 'https://cdn.worldvectorlogo.com/logos/google-maps-2020-icon.svg',
@@ -21,10 +23,19 @@ export class HomeComponent implements OnInit {
 
   constructor(
     public reports: AvisameService
-  ) {}
+  ) {
+    if (localStorage.getItem('about')){
+      this.about = true;
+      localStorage.removeItem('about');
+    }
+  }
 
   ngOnInit(): void {
 
+  }
+
+  changeAbout() {
+    this.about = !this.about;
   }
 
 }

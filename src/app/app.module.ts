@@ -21,13 +21,15 @@ import { HomeComponent } from './pages/home/home.component';
 import { AddreportComponent } from './pages/addreport/addreport.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
+import { AboutComponent } from './pages/about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     AddreportComponent,
-    TermsComponent
+    TermsComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

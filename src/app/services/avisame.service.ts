@@ -18,6 +18,7 @@ export class AvisameService {
   public myPosition: Point;
   public loading = true;
 
+
   constructor(
     private af: AngularFirestore,
     private afa: AngularFireAuth,

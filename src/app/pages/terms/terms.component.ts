@@ -24,6 +24,7 @@ export class TermsComponent implements OnInit {
     if (this.terms) {
       localStorage.setItem('terms', 'true');
       localStorage.setItem('pais', this.pais);
+      localStorage.setItem('about', 'true');
       this.router.navigateByUrl('/home');
       this.toastr.success('Haz aceptado los términos y condiciones', 'Genial', {
         closeButton: true,
